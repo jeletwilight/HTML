@@ -1,0 +1,158 @@
+body {
+    margin : 0;
+    box-sizing: border-box;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+h3{
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+
+ul{
+    margin-bottom: 0;
+}
+
+li{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.mybody{
+    width: 100%;
+    background-color: #ffb0cd;
+}
+
+.head {
+    background-color: #ffd1bd;
+    height: 150px;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.head-name{
+    font-size: 50px;
+    color: white;
+    animation: fading 3s infinite;
+    animation-direction: alternate;
+}
+
+.navbar{
+    height: 50px;
+    width: 100%;
+    background-color: #e7faff;
+    margin-bottom: 20px;
+}
+
+.content-container{
+    display: grid;
+    justify-items: center;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+.content-blog{
+    display: grid;
+    /* justify-content: center; */
+    align-content: flex-start;
+    width: 90%;
+    height: auto;
+    border-radius: 15px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    transition: all 1s;
+}
+
+.content-blog:hover{
+    transition: all 1s;
+    font-size: larger;
+}
+
+#about >ul> li{
+    font-size: 12px;
+    width: 100%;
+}
+
+#edu >ul> li{
+    font-size: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#exp >ul> li{
+    font-size: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.content-blog > p{
+    display: flex;
+    justify-self: center;
+    width: 80%;
+}
+
+.foot{
+    position: sticky;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background: #e7faff;
+    color: black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot > i{
+    transition: all 300ms;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.foot > i:hover{
+    font-size: larger;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+@keyframes fading{
+    from{opacity: 50%;}
+    to{opacity: 100%;}
+}
+
+@media only screen and (max-width: 600px){
+    .head-name{
+        font-size: 30px;
+    }
+    .content-container{
+        grid-template-columns: 1fr;
+    }
+    .content-blog{
+        min-height: 0;
+    }
+    .foot{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:1200px){
+    .head-name{
+        font-size: 50px;
+    }
+    .content-container{ 
+        height: 80vh;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .head-name{
+        font-size: 70px;
+    }
+    .content-container{ 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
